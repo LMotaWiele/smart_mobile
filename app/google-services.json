@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "529859961949",
+    "project_id": "android-class2-runlucas",
+    "storage_bucket": "android-class2-runlucas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529859961949:android:550606baa2c4747aa199b4",
+        "android_client_info": {
+          "package_name": "com.example.hackme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529859961949-9d107hhh6oqh7697u25u6ft45bgko9ub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMLa02-7m1H7-P5GQS2SJPfjT5pKg4K10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529859961949-9d107hhh6oqh7697u25u6ft45bgko9ub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

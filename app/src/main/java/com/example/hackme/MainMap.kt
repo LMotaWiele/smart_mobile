@@ -1,23 +1,23 @@
 package com.example.hackme
 
 import android.Manifest
-import android.content.IntentSender
+import android.annotation.SuppressLint
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.material.snackbar.Snackbar
+
 
 class MainMap : AppCompatActivity(), OnMapReadyCallback {
 
@@ -52,9 +52,17 @@ class MainMap : AppCompatActivity(), OnMapReadyCallback {
         val homeLatLng = LatLng(latitude, longitude)
         //map.addMarker(MarkerOptions().position(homeLatLng).title("Marker in Fontys R10"))
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(homeLatLng, zoomLevel))
+        //map.uiSettings.isZoomControlsEnabled = true
+        map.uiSettings.isCompassEnabled = true
 
         setPoiClick(map)
         enableMyLocation()
+
+        val circle = map.addCircle(CircleOptions()
+                .center(LatLng(51.4517, 5.4807))
+                .radius(250.0)
+                .strokeColor(Color.GREEN)
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -101,6 +109,7 @@ class MainMap : AppCompatActivity(), OnMapReadyCallback {
                 Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
     }
 
+    @SuppressLint("MissingPermission")
     private fun enableMyLocation() {
         if (isPermissionGranted()) {
             map.isMyLocationEnabled = true

@@ -13,4 +13,5 @@
     <string name="dropped_pin">Dropped Pin</string>
     <string name="poi">poi</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_set_area">Map</string>
 </resources>

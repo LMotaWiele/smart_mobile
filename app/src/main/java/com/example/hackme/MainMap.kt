@@ -10,6 +10,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.hackme.databinding.ActivityMainBinding
+import com.example.hackme.databinding.ActivityMainMapBinding
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -20,10 +22,8 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.snackbar.Snackbar
 
 class MainMap : AppCompatActivity(), OnMapReadyCallback {
-
     private lateinit var map: GoogleMap
     private val REQUEST_LOCATION_PERMISSION = 1
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_map)

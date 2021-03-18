@@ -74,10 +74,12 @@
                         android:orientation="horizontal">
 
                         <com.google.android.material.button.MaterialButton
+                            android:id="@+id/area_button"
                             style="?attr/borderlessButtonStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="8dp"
+                            android:onClick="goMainMap"
                             android:text="@string/set_safety_area" />
 
                         <com.google.android.material.button.MaterialButton

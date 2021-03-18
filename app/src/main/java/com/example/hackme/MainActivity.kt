@@ -3,6 +3,7 @@ package com.example.hackme
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.hackme.databinding.ActivityMainBinding
 
 
@@ -32,11 +33,11 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-
-
-
     }
-
+    fun goMainMap (view: View){
+        val goMap = Intent(this, SetAreaActivity::class.java)
+        startActivity(goMap)
+    }
 
 
 }
